@@ -39,5 +39,9 @@ int main(){
     cout<<endl;
 }
 
+// Logika not
+#include <iostream>
+using namespace std;
+
 
 
