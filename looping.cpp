@@ -70,7 +70,17 @@ int main(){
     float nilB,nilm,rerata;
     string status;
 
+cout<<"Masukkan nilai Matematika = ";
+    cin>>nilm;
+    cout<<"Masukkan nilai Bahasa Inggris = ";
+    cin>>nilB;
 
+    rerata = (nilB+nilm)/2;
+
+    if ((rerata >= 60) || (nilm >= 70))
+        status = "Lulus";
+    else
+        status = "Tidak lulus";
 
 
 
