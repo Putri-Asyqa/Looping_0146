@@ -66,6 +66,10 @@ int main(){
 #include <iostream>
 using namespace std;
 
+int main(){
+    float nilB,nilm,rerata;
+    string status;
+
 
 
 
