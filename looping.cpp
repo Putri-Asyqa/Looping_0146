@@ -2,12 +2,12 @@
 #include <ctime>
 using namespace std;
 
-int main(){
+// ======================
+// PERULANGAN
+// ======================
+void perulangan(){
     int x;
 
-    // ======================
-    // PERULANGAN
-    // ======================
     cout<<"PERULANGAN FOR"<<endl;
     for(int i=0;i<=4;i++){
         cout<<"Teknologi Informasi UMY"<<endl;
@@ -24,10 +24,10 @@ int main(){
         x = rand()%10;
     }
 
-    cout<<"Bilangan acak while terakhir = "<<x<<endl;
+    cout<<"Bilangan acak while yang terakhir ="<<x<<endl;
     cout<<endl;
 
-    cout<<"PERULANGAN DO WHILE"<<endl;
+    cout<<"PERULANGAN DO...WHILE"<<endl;
     x = 1 + rand()%10;
 
     do{
@@ -35,46 +35,87 @@ int main(){
         x = rand()%10;
     }while(x<=5);
 
-    cout<<"Bilangan acak do-while terakhir = "<<x<<endl;
+    cout<<"Bilangan acak do-while yang terakhir ="<<x<<endl;
+    cout<<endl;
+}
 
-    cout<<"\n====================\n";
-
-    // ======================
-    // INPUT NILAI
-    // ======================
-    float nilB, nilM, rerata;
+// ======================
+// LOGIKA NOT
+// ======================
+void logikaNot(){
+    float nilB,nilm,rerata;
     string status;
 
     cout<<"Masukkan nilai Matematika = ";
-    cin>>nilM;
+    cin>>nilm;
     cout<<"Masukkan nilai Bahasa Inggris = ";
     cin>>nilB;
 
-    rerata = (nilB+nilM)/2;
+    rerata = (nilB+nilm)/2;
 
-    // ======================
-    // LOGIKA NOT
-    // ======================
     if (!(rerata < 60))
-        cout<<"Lulus (NOT)"<<endl;
+        status = "Lulus";
     else
-        cout<<"Tidak lulus (NOT)"<<endl;
+        status = "Tidak lulus";
 
-    // ======================
-    // LOGIKA OR
-    // ======================
-    if ((rerata >= 60) || (nilM >= 70))
-        cout<<"Lulus (OR)"<<endl;
-    else
-        cout<<"Tidak lulus (OR)"<<endl;
+    cout<<"Status kelulusan = "<<status<<" ,dengan nilai rata-rata = "<<rerata<<endl;
+}
 
-    // ======================
-    // LOGIKA AND
-    // ======================
-    if ((rerata >= 60) && (nilM >= 70))
-        cout<<"Lulus (AND)"<<endl;
+// ======================
+// LOGIKA OR
+// ======================
+void logikaOR(){
+    float nilB,nilm,rerata;
+    string status;
+
+    cout<<"Masukkan nilai Matematika = ";
+    cin>>nilm;
+    cout<<"Masukkan nilai Bahasa Inggris = ";
+    cin>>nilB;
+
+    rerata = (nilB+nilm)/2;
+
+    if ((rerata >= 60) || (nilm >= 70))
+        status = "Lulus";
     else
-        cout<<"Tidak lulus (AND)"<<endl;
+        status = "Tidak lulus";
+
+    cout<<"Status kelulusan = "<<status<<" ,dengan nilai rata-rata = "<<rerata<<endl;
+}
+
+// ======================
+// LOGIKA AND
+// ======================
+void logikaAND(){
+    float nilB,nilm,rerata;
+    string status;
+
+    cout<<"Masukkan nilai Matematika = ";
+    cin>>nilm;
+    cout<<"Masukkan nilai Bahasa Inggris = ";
+    cin>>nilB;
+
+    rerata = (nilB+nilm)/2;
+
+    if ((rerata >= 60) && (nilm >= 70))
+        status = "Lulus";
+    else
+        status = "Tidak lulus";
+
+    cout<<"Status kelulusan = "<<status<<" ,dengan nilai rata-rata = "<<rerata<<endl;
+}
+
+int main(){
+    perulangan();
+    cout<<"\n====================\n";
+
+    logikaNot();
+    cout<<"\n====================\n";
+
+    logikaOR();
+    cout<<"\n====================\n";
+
+    logikaAND();
 
     return 0;
 }
