@@ -47,5 +47,12 @@ int main(){
     float nilB,nilm,rerata;
     string status;
 
+    cout<<"Masukkan nilai Matematika = ";
+    cin>>nilm;
+    cout<<"Masukkan nilai Bahasa Inggris = ";
+    cin>>nilB;
+
+
+
 
 
